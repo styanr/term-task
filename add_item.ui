@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>add_item</class>
+ <widget class="QDialog" name="add_item">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>942</width>
+    <height>404</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Adding a new transport</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../Download/bus.png</normaloff>../../Download/bus.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog {
+	background-color: #171717;
+}
+QMenu {
+    background-color: rgb(34, 34, 34); 
+}
+
+QMenu::item {
+    background-color: transparent;
+	padding: 2px 25px 2px 20px;
+	color: white;
+	font: 700 11pt &quot;Supreme&quot;;
+}
+
+QMenu::item:selected {
+    background-color: #444444;
+}
+QMenuBar {
+	background-color: #171717;
+	font: 700 11pt &quot;Supreme&quot;;
+	border-bottom: 2px solid rgb(34, 34, 34);
+	padding: 2px 0px 0px 2px;
+}
+QMenuBar::item {
+	color: white;
+	background: transparent;
+}
+QMenuBar::item:selected{
+	color: white;
+	background-color: #444444;
+}
+QMenuBar::item:pressed{
+	color: white;
+	background-color: rgb(84, 84, 84);
+}
+
+QTableWidget {
+	background-color: #171717;
+	alternate-background-color: rgb(34, 34, 34);
+	color: white;
+	border: none;
+	font: 700 11pt &quot;Supreme&quot;;
+}
+QHeaderView::section { 
+	border:none;
+	background-color: #171717; 
+	color: white;
+	font: 700 11pt &quot;Supreme&quot;;
+	padding: 2px 0px 0px 2px;
+}
+ 
+QHeaderView::down-arrow {
+    image: url(C:/Users/Oleh/Desktop/down-arrow.png);
+	subcontrol-position: center top;
+}
+
+QHeaderView::up-arrow {
+    image: url(C:/Users/Oleh/Desktop/up-arrow.png);
+	subcontrol-position: center top;
+}
+
+QTableCornerButton::section {
+	background-color: #171717; 
+}
+
+QScrollBar:vertical {
+	border: none;
+    background: #171717;
+    width: 14px;
+    margin: 15px 0px 15px 0;
+	border-radius: 0px;
+ }
+
+/*  HANDLE BAR VERTICAL */
+QScrollBar::handle:vertical {	
+	background-color: #444444;
+	min-height: 30px;
+	border-radius: 7px;
+}
+QScrollBar::handle:vertical:hover{	
+	background-color: #800020;
+}
+QScrollBar::handle:vertical:pressed {	
+	background-color: #DA0037;
+}
+
+/* BTN TOP - SCROLLBAR */
+QScrollBar::sub-line:vertical {
+	border: none;
+	background-color: #444444;
+	height: 15px;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+	subcontrol-position: top;
+	subcontrol-origin: margin;
+}
+QScrollBar::sub-line:vertical:hover {	
+	background-color: #800020;
+}
+QScrollBar::sub-line:vertical:pressed {	
+	background-color: #DA0037;
+}
+
+/* BTN BOTTOM - SCROLLBAR */
+QScrollBar::add-line:vertical {
+	border: none;
+	background-color: #444444;
+	height: 15px;
+	border-bottom-left-radius: 7px;
+	border-bottom-right-radius: 7px;
+	subcontrol-position: bottom;
+	subcontrol-origin: margin;
+}
+QScrollBar::add-line:vertical:hover {	
+	background-color: #800020;
+}
+QScrollBar::add-line:vertical:pressed {	
+	background-color: #DA0037;
+}
+
+/* RESET ARROW */
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
+	background: none;
+}
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+	background: none;
+}
+QLabel {
+	margin: 2px 10px 5px 10px;
+	color: white;
+	font: 700 11pt &quot;Supreme&quot;;
+}
+QComboBox {
+	font: 700 11pt &quot;Supreme&quot;;
+	background-color: #444444;
+	color:white;
+	padding: 5px 5px 5px 5px;
+	border-radius: 14px;
+}
+QComboBox::drop-down {
+	padding: 5px 5px 5px 5px;
+	border-radius: 14px;
+}
+QComboBox:on {
+	background-color: rgb(84, 84, 84);
+}
+QComboBox::down-arrow {
+	image: url(C:/Users/Oleh/Desktop/down-arrow.png);
+}
+QComboBox QListView
+{
+	color: white;
+	background-color: #444444;
+	padding: 5px
+}
+QComboBox QListView:item:hover {
+	background-color: #DA0037;
+	border:0px;
+	border-radius:5px;
+}
+QPushButton {
+	color: white;
+	background-color: #444444;
+	padding: 5px;
+	border	: 2px solid black;
+	border-radius:14px;
+	font: 700 11pt &quot;Supreme&quot;;
+}
+QPushButton::hover {
+	background-color: #800020;
+}
+QPushButton::pressed {
+	background-color: #DA0037;
+}
+QPushButton::disabled {
+	color:rgb(124, 124, 124)
+}
+QMessageBox {
+	background-color: #171717;
+}
+QLineEdit {
+	color: white;
+	background-color: #444444;
+	padding: 2px;
+	border	: 2px solid #444444;
+	border-radius:14px;
+	font: 700 11pt &quot;Supreme&quot;;
+}
+QLineEdit::hover {
+	border-color: #800020;
+}
+QLineEdit::focus {
+	border-color: #DA0037;
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout" stretch="1,2,0,3,1">
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="font">
+      <font>
+       <family>Supreme</family>
+       <pointsize>20</pointsize>
+       <italic>false</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+	margin: 0px 0px 0px 0px;
+	color: white;
+	font: 700 20pt &quot;Supreme&quot;;
+}</string>
+     </property>
+     <property name="text">
+      <string>Adding a new transport</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="line">
+     <property name="styleSheet">
+      <string notr="true">margin: 5px 2px 5px 10px;</string>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <layout class="QFormLayout" name="formLayout_2">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Car Brand</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="le_brand">
+       <property name="inputMask">
+        <string/>
+       </property>
+       <property name="placeholderText">
+        <string>Enter car brand here</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>Engine Type</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="le_engine">
+       <property name="placeholderText">
+        <string>Enter engine type here. Accepted inputs: &quot;Electric&quot;, &quot;Hybrid&quot;, &quot;Petrol&quot; and &quot;Diesel&quot;.</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>Axles</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="le_axles">
+       <property name="placeholderText">
+        <string>Enter axle count here. Value has to be &gt;= 2.</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_5">
+       <property name="text">
+        <string>Passengers</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLineEdit" name="le_passengers">
+       <property name="placeholderText">
+        <string>Enter passenger count here.</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="label_6">
+       <property name="text">
+        <string>Seats</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QLineEdit" name="le_seats">
+       <property name="placeholderText">
+        <string>Enter seat count here. The number has to be &lt;= passenger count.</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="label_7">
+       <property name="text">
+        <string>Doors</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QLineEdit" name="le_doors">
+       <property name="placeholderText">
+        <string>Enter the number of doors here. It has to be &gt; 1.</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QLabel" name="label_8">
+       <property name="text">
+        <string>Horsepower</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="1">
+      <widget class="QLineEdit" name="le_horsepower">
+       <property name="placeholderText">
+        <string>Enter horsepower here. It has to be more than 200.</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0">
+      <widget class="QLabel" name="label_9">
+       <property name="text">
+        <string>Low Floor</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="1">
+      <widget class="QLineEdit" name="le_lowfloor">
+       <property name="placeholderText">
+        <string>Enter &quot;Yes&quot; if car has low floor, otherwise enter &quot;No&quot;.</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout" stretch="4,1,1">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="b_OK">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="text">
+        <string>OK</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>CANCEL</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+ <slots>
+  <slot>check_conditions(QString)</slot>
+ </slots>
+</ui>

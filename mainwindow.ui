@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1026</width>
+    <height>631</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Transport Viewer</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../Download/bus.png</normaloff>../../Download/bus.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+	background-color: #171717;
+}
+QMenu {
+    background-color: rgb(34, 34, 34); 
+}
+
+QMenu::item {
+    background-color: transparent;
+	padding: 2px 25px 2px 20px;
+	color: white;
+	font: 700 11pt &quot;Supreme&quot;;
+}
+
+QMenu::item:selected {
+    background-color: #444444;
+}
+QMenuBar {
+	background-color: #171717;
+	font: 700 11pt &quot;Supreme&quot;;
+	border-bottom: 2px solid rgb(34, 34, 34);
+	padding: 2px 0px 0px 2px;
+}
+QMenuBar::item {
+	color: white;
+	background: transparent;
+}
+QMenuBar::item:selected{
+	color: white;
+	background-color: #444444;
+}
+QMenuBar::item:pressed{
+	color: white;
+	background-color: rgb(84, 84, 84);
+}
+
+QTableWidget {
+	background-color: #171717;
+	alternate-background-color: rgb(34, 34, 34);
+	color: white;
+	border: none;
+	font: 700 11pt &quot;Supreme&quot;;
+}
+QHeaderView::section { 
+	border:none;
+	background-color: #171717; 
+	color: white;
+	font: 700 11pt &quot;Supreme&quot;;
+	padding: 2px 0px 0px 2px;
+}
+ 
+QHeaderView::down-arrow {
+    image: url(C:/Users/Oleh/Desktop/down-arrow.png);
+	subcontrol-position: center top;
+}
+
+QHeaderView::up-arrow {
+    image: url(C:/Users/Oleh/Desktop/up-arrow.png);
+	subcontrol-position: center top;
+}
+
+QTableCornerButton::section {
+	background-color: #171717; 
+}
+
+QScrollBar:vertical {
+	border: none;
+    background: #171717;
+    width: 14px;
+    margin: 15px 0px 15px 0;
+	border-radius: 0px;
+ }
+
+/*  HANDLE BAR VERTICAL */
+QScrollBar::handle:vertical {	
+	background-color: #444444;
+	min-height: 30px;
+	border-radius: 7px;
+}
+QScrollBar::handle:vertical:hover{	
+	background-color: #800020;
+}
+QScrollBar::handle:vertical:pressed {	
+	background-color: #DA0037;
+}
+
+/* BTN TOP - SCROLLBAR */
+QScrollBar::sub-line:vertical {
+	border: none;
+	background-color: #444444;
+	height: 15px;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+	subcontrol-position: top;
+	subcontrol-origin: margin;
+}
+QScrollBar::sub-line:vertical:hover {	
+	background-color: #800020;
+}
+QScrollBar::sub-line:vertical:pressed {	
+	background-color: #DA0037;
+}
+
+/* BTN BOTTOM - SCROLLBAR */
+QScrollBar::add-line:vertical {
+	border: none;
+	background-color: #444444;
+	height: 15px;
+	border-bottom-left-radius: 7px;
+	border-bottom-right-radius: 7px;
+	subcontrol-position: bottom;
+	subcontrol-origin: margin;
+}
+QScrollBar::add-line:vertical:hover {	
+	background-color: #800020;
+}
+QScrollBar::add-line:vertical:pressed {	
+	background-color: #DA0037;
+}
+
+/* RESET ARROW */
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
+	background: none;
+}
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+	background: none;
+}
+QLabel {
+	margin: 2px 10px 5px 10px;
+	color: white;
+	font: 700 11pt &quot;Supreme&quot;;
+}
+QComboBox {
+	font: 700 11pt &quot;Supreme&quot;;
+	background-color: #444444;
+	color:white;
+	padding: 5px 5px 5px 5px;
+	border-radius: 14px;
+}
+QComboBox::drop-down {
+	padding: 5px 5px 5px 5px;
+	border-radius: 14px;
+}
+QComboBox:on {
+	background-color: rgb(84, 84, 84);
+}
+QComboBox::down-arrow {
+	image: url(C:/Users/Oleh/Desktop/down-arrow.png);
+}
+QComboBox QListView
+{
+	color: white;
+	background-color: #444444;
+	padding: 5px
+}
+QComboBox QListView:item:hover {
+	background-color: #DA0037;
+	border:0px;
+	border-radius:5px;
+}
+QPushButton {
+	color: white;
+	background-color: #444444;
+	padding: 5px;
+	border	: 2px solid black;
+	border-radius:14px;
+	font: 700 11pt &quot;Supreme&quot;;
+}
+QPushButton::hover {
+	background-color: #800020;
+}
+QPushButton::pressed {
+	background-color: #DA0037;
+}
+QMessageBox {
+	background-color: #171717;
+}
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="1">
+     <layout class="QGridLayout" name="gridLayout" columnstretch="5,0,0,0">
+      <item row="0" column="0">
+       <widget class="QTableWidget" name="main_table">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="horizontalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="rowCount">
+         <number>0</number>
+        </property>
+        <property name="columnCount">
+         <number>9</number>
+        </property>
+        <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+         <bool>false</bool>
+        </attribute>
+        <column>
+         <property name="text">
+          <string>Number</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Car Brand</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Engine Type</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Axles</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Passengers</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Seats</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Doors</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Horsepower</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Low Floor</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="Line" name="line">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="minimumSize">
+           <size>
+            <width>130</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Sorting options:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="ChooseArgument">
+          <item>
+           <property name="text">
+            <string>Car Brand</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Engine Type</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Axles</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Passengers</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Seats</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Doors</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Horsepower</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Low Floor</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="ChooseOrder">
+          <item>
+           <property name="text">
+            <string>Ascending</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Descending</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton">
+          <property name="styleSheet">
+           <string notr="true">margin: 10</string>
+          </property>
+          <property name="text">
+           <string>SORT</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="b_el_20_26">
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>Find electrotransport with
+maximum horsepower and
+20-26 seats</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="b_more_than_avg">
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>Highlight transport
+more than average horsepower
+more than 4 axles</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="b_lowfloor">
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>Highlight transport with low floor and
+more than 40 standing passengers
+and more than 4 doors</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2"/>
+        </item>
+       </layout>
+      </item>
+      <item row="2" column="0">
+       <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,5,3,2">
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>Average horsepower: 0</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="b_add">
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>Add new transport</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="b_clr">
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>Clear colors</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1026</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionRead_from"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionSave_as"/>
+   </widget>
+   <addaction name="menuFile"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionRead_from">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionSave_as">
+   <property name="text">
+    <string>Save as...</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
