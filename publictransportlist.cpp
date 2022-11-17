@@ -50,7 +50,7 @@ std::size_t PublicTransportList::most_powerful_electric() const {
 }
 
 std::vector<std::size_t> PublicTransportList::more_powerful_than_avg_more_than_4_axles() const {
-    /* returns a vector of indexes of items
+    /* returns a vector of indices of items
      * that are more powerful than average
      * and have more than 4 axles.
      * Throws an exception if list is empty.
@@ -66,7 +66,7 @@ std::vector<std::size_t> PublicTransportList::more_powerful_than_avg_more_than_4
 }
 
 std::vector<std::size_t> PublicTransportList::more_than_4_doors_has_low_floor_more_than_40_standing_passengers() const {
-    /* returns a list of indexes of items
+    /* returns a list of indices of items
      * than have more than 4 doors,
      * have low floor and
      * have more than 40 standing passengers
