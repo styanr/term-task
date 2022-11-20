@@ -440,7 +440,7 @@ and more than 4 doors</string>
            <string notr="true"/>
           </property>
           <property name="text">
-           <string>Add new transport</string>
+           <string>Add new vehicle</string>
           </property>
          </widget>
         </item>

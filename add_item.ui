@@ -17,7 +17,7 @@
    </sizepolicy>
   </property>
   <property name="windowTitle">
-   <string>Adding a new transport</string>
+   <string>Adding new vehicle</string>
   </property>
   <property name="windowIcon">
    <iconset>
@@ -238,7 +238,7 @@ QLineEdit::focus {
 }</string>
      </property>
      <property name="text">
-      <string>Adding a new transport</string>
+      <string>Adding new vehicle</string>
      </property>
     </widget>
    </item>
