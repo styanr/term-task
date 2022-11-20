@@ -37,6 +37,7 @@ std::size_t PublicTransportList::most_powerful_electric() const {
                 && list[max_idx].get_seats_count() < 26)) {
             max_idx++;
         }
+        else break;
     if(max_idx == list.size())
         throw CustomException("There are no elements that fit the criteria! Please try again with another list.");
     for(int i = 0; i < list.size(); i++) {
